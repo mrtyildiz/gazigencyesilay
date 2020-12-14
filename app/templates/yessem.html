@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+      
+{% block content %}
+    <section id="contact" class="contact">
+	  <style>
+		.center {
+		  max-width: 900px;
+		  margin: auto;
+		}
+		</style>
+		<body>
+        {% for Yessem2020 in Yessem_all %}
+		<div class="center">
+		  <iframe width="1000" height="700" src="https://www.youtube.com/embed/{{Yessem2020.Emded}}" frameborder="0"></iframe>
+        </div>
+        {% endfor %}
+		</body>
+	
+</section>
+{%endblock%}

@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+      
+{% block content %}
+    <section id="team" class="team section-bg">
+      <div class="container">
+
+        <div class="section-title" data-aos="fade-up">
+          <h2>Team</h2>
+          <p>Gazi Genç Yeşilay Yönetim Kurulu</p>
+        </div>
+
+        <div class="row">
+         {% for takim in Team_all %}
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+            <div class="member" data-aos="fade-up" data-aos-delay="100">
+              <div class="member-img">
+                <img src="{{ takim.Team_Foto.url }}" class="img-fluid" alt="">
+                <div class="social">
+                  <a href="{{ takim.Twitter_link }}"><i class="icofont-twitter"></i></a>
+                  <a href="{{ takim.linked_link }}"><i class="icofont-linkedin"></i></a>
+                </div>
+              </div>
+              <div class="member-info">
+                <h4>{{ takim.Ad_Soyad }}</h4>
+                <span>{{ takim.Görevi }}</span>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+
+
+    </div>
+  </div>
+    </section>
+
+    {%endblock%}
