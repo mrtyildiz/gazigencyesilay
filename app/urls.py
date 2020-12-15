@@ -8,5 +8,5 @@ urlpatterns = [
     path('about', views.about, name='about'),
     path('team', views.team, name='team'),
     path('yessem2020', views.yessem2020, name='yessem2020')
-]  + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+]  + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT, settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
