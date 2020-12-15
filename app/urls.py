@@ -10,3 +10,4 @@ urlpatterns = [
     path('yessem2020', views.yessem2020, name='yessem2020')
 ]
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
