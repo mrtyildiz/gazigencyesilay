@@ -12,7 +12,6 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 
 from pathlib import Path
 import os
-import django_heroku
 # Build paths inimport django_herokuside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -70,7 +69,7 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'gazigencyesilay.wsgi.application'
-django_heroku.settings(locals())
+
 
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
@@ -117,7 +116,7 @@ USE_TZ = True
 
 
 PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
-STATIC_ROOT  = os.path.join(PROJECT_ROOT, 'staticfiles')
+STATIC_ROOT  = os.path.join(PROJECT_ROOT, 'static')
 STATIC_URL = '/static/'
 
 # Extra lookup directories for collectstatic to find static files
